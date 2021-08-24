@@ -77,7 +77,7 @@ FROM
 
 输出:
 
-![image-20210819175327771](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210819175327771.png)
+![image-20210819175327771](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210819175327771.png)
 
 2.计算所有部门工资排名,如果工资相同则排名连续
 
@@ -93,7 +93,7 @@ FROM
 
 输出:
 
-![image-20210819181725553](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210819181725553.png)
+![image-20210819181725553](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210819181725553.png)
 
 3.计算所有部门的工资,如果工资相同则并列,下一名连续
 
@@ -107,7 +107,7 @@ FROM
 
 输出:
 
-![image-20210819182737758](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210819182737758.png)
+![image-20210819182737758](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210819182737758.png)
 
 4.计算员工在各个部门中的工资,如果遇到工资排名相同下一个排名连续
 
@@ -121,7 +121,7 @@ FROM
 
 输出:
 
-![image-20210819183342874](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210819183342874.png)
+![image-20210819183342874](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210819183342874.png)
 
 5.计算员工在各个部门的工资排名。如果遇到工资相同则排名相同不连续排名
 
@@ -135,7 +135,7 @@ FROM
 
 输出：
 
-![image-20210820091602875](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210820091602875.png)
+![image-20210820091602875](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210820091602875.png)
 
 6.计算员工在各个部门中的排名，如果遇到工资相同则排名不相同排名连续
 
@@ -149,7 +149,7 @@ FROM
 
 输出：
 
-![image-20210820091857248](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210820091857248.png)
+![image-20210820091857248](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210820091857248.png)
 
 那么问题来了，找出每个部门获得前三高工资的所有员工。例如，根据上述给定的表，查询结果应返回： 
 
@@ -185,4 +185,4 @@ FROM
 SELECT	* FROM	( SELECT e.*, dense_rank () over ( PARTITION BY e.DepartmentId ORDER BY e.Salary DESC ) AS 'rank' FROM employee AS e ) AS p
 ```
 
-![image-20210820095317856](C:\Users\郭康氏\AppData\Roaming\Typora\typora-user-images\image-20210820095317856.png)
+![image-20210820095317856](https://github.com/Alertu/Mysql-OnlineAnallyticalProcessing/blob/main/image-20210820095317856.png)
